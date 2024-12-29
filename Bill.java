@@ -1,5 +1,4 @@
 package com.mycompany.resalefashionhub.bill;
-
 import com.mycompany.resalefashionhub.product.Product;
 import java.util.List;
 
