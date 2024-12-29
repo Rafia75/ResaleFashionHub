@@ -1,11 +1,11 @@
 package com.mycompany.resalefashionhub.product;
 
 public class Rating {
-    private int stars;  // Rating out of 5
+    private int stars; 
     private String reviewText;
 
     public Rating(int stars, String reviewText) {
-        if (stars < 1) stars = 1;   // Ensure rating is between 1 and 5
+        if (stars < 1) stars = 1;
         if (stars > 5) stars = 5;
         this.stars = stars;
         this.reviewText = reviewText;
