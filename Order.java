@@ -11,11 +11,9 @@ public class Order {
 
     public Order(List<Product> products) {
         this.products = products;
-        this.orderDate = new Date();  // Set the current date as the order date
+        this.orderDate = new Date(); 
         this.totalCost = calculateTotal();
     }
-
-    // Method to calculate total cost of the order
     private double calculateTotal() {
         double sum = 0;
         for (Product product : products) {
@@ -24,7 +22,6 @@ public class Order {
         return sum;
     }
 
-    // Getters
     public List<Product> getProducts() {
         return products;
     }
