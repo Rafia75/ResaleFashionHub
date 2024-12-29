@@ -4,8 +4,8 @@ public class Product {
     private String name;
     private String description;
     private double price;
-    private double rating;  // Average rating of the product
-    private int numberOfRatings;  // To track how many users have rated this product
+    private double rating; 
+    private int numberOfRatings;
 
     public Product(String name, String description, double price) {
         this.name = name;
@@ -15,7 +15,6 @@ public class Product {
         this.numberOfRatings = 0;
     }
 
-    // Getters and Setters
     public String getName() {
         return name;
     }
@@ -31,7 +30,7 @@ public class Product {
     public double getRating() {
         return rating;
     }
-// Inside Product.java class
+
 public void rateProduct(double userRating) {
     // Update the product rating based on the user's input
     this.rating = (this.rating * numberOfRatings + userRating) / (++numberOfRatings);
