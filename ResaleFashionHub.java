@@ -1,5 +1,4 @@
 package com.mycompany.resalefashionhub;
-
 import java.util.HashMap;
 import java.util.Scanner;
 import com.mycompany.resalefashionhub.admin.Admin;
