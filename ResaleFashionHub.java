@@ -46,7 +46,7 @@ public class ResaleFashionHub {
             System.out.println("3. Exit");
             System.out.print("Choose an option: ");
             int roleChoice = scanner.nextInt();
-            scanner.nextLine(); // Consume the newline
+            scanner.nextLine();
 
             switch (roleChoice) {
                 case 1:
@@ -70,8 +70,7 @@ public class ResaleFashionHub {
         String adminUsername = scanner.nextLine();
         System.out.print("Enter Admin password: ");
         String adminPassword = scanner.nextLine();
-
-        // Hardcoded admin credentials for simplicity
+        
         if (adminUsername.equals("Sayem") && adminPassword.equals("sumaiya")) {
             System.out.println("Admin login successful!");
             adminMenu(scanner, admin);
@@ -98,7 +97,7 @@ public class ResaleFashionHub {
             System.out.println("3. Log Out");
             System.out.print("Choose an option: ");
             int adminChoice = scanner.nextInt();
-            scanner.nextLine(); // Consume the newline
+            scanner.nextLine();
 
             switch (adminChoice) {
                 case 1:
@@ -123,7 +122,7 @@ public class ResaleFashionHub {
         String description = scanner.nextLine();
         System.out.print("Enter product price: ");
         double price = scanner.nextDouble();
-        scanner.nextLine(); // Consume the newline
+        scanner.nextLine();
 
         Product product = new Product(name, description, price);
         admin.addProduct(product);
@@ -135,7 +134,7 @@ public class ResaleFashionHub {
         System.out.println("2. Register");
         System.out.print("Choose an option: ");
         int loginChoice = scanner.nextInt();
-        scanner.nextLine(); // Consume the newline
+        scanner.nextLine(); 
 
         switch (loginChoice) {
             case 1:
@@ -155,7 +154,6 @@ public class ResaleFashionHub {
         System.out.print("Enter password: ");
         String password = scanner.nextLine();
 
-        // Check if user exists and password matches
         if (registeredUsers.containsKey(username) && registeredUsers.get(username).equals(password)) {
             System.out.println("User login successful!");
             User user = new User(username, password);
@@ -171,11 +169,9 @@ public class ResaleFashionHub {
         System.out.print("Enter a password: ");
         String password = scanner.nextLine();
 
-        // Check if username is already taken
         if (registeredUsers.containsKey(username)) {
             System.out.println("Username already exists. Please try a different one.");
         } else {
-            // Register the new user
             registeredUsers.put(username, password);
             System.out.println("Registration successful! You can now log in.");
         }
@@ -193,7 +189,7 @@ public class ResaleFashionHub {
             System.out.println("7. Log Out");
             System.out.print("Choose an option: ");
             int userChoice = scanner.nextInt();
-            scanner.nextLine(); // Consume the newline
+            scanner.nextLine(); 
 
             switch (userChoice) {
                 case 1:
@@ -203,7 +199,7 @@ public class ResaleFashionHub {
                     admin.displayProducts();
                     System.out.print("Enter the product number to add to cart: ");
                     int productChoice = scanner.nextInt();
-                    scanner.nextLine(); // Consume the newline
+                    scanner.nextLine();
                     if (productChoice > 0 && productChoice <= admin.getProducts().size()) {
                         user.addToCart(admin.getProducts().get(productChoice - 1));
                         System.out.println("Product added to cart!");
@@ -225,11 +221,10 @@ public class ResaleFashionHub {
                     int ratingProductChoice = scanner.nextInt();
                     System.out.print("Enter your rating (1-5): ");
                     double rating = scanner.nextDouble();
-                    scanner.nextLine(); // Consume the newline
+                    scanner.nextLine(); 
 
                     if (ratingProductChoice > 0 && ratingProductChoice <= admin.getProducts().size()) {
                         if (rating >= 1 && rating <= 5) {
-                            // Rate the product through the user object
                             user.rateProduct(admin.getProducts().get(ratingProductChoice - 1), rating);
                         } else {
                             System.out.println("Invalid rating. Please provide a rating between 1 and 5.");
