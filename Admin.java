@@ -24,12 +24,10 @@ public class Admin {
         if (products.isEmpty()) {
             System.out.println("No products available.");
         } else {
-            // Print the table header
             System.out.println("+-----+----------------------+------------------------------------------+---------+");
             System.out.printf("| %-3s | %-20s | %-40s | %-8s|\n", "No", "Name", "Description", "Price");
             System.out.println("+-----+----------------------+------------------------------------------+---------+");
 
-            // Print each product in the table
             for (int i = 0; i < products.size(); i++) {
                 Product product = products.get(i);
                 System.out.printf(
@@ -40,8 +38,6 @@ public class Admin {
                     product.getPrice()
                 );
             }
-
-            // Print the table footer
             System.out.println("+-----+-----------------------+-----------------------------------------+---------+");
         }
     }
