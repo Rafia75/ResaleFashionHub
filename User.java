@@ -1,5 +1,4 @@
 package com.mycompany.resalefashionhub.user;
-
 import com.mycompany.resalefashionhub.product.Product;
 import com.mycompany.resalefashionhub.order.Order;
 import com.mycompany.resalefashionhub.bill.Bill;
