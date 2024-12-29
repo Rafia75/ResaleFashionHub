@@ -13,7 +13,6 @@ public class User {
     private List<Product> cart;
     private List<Order> orderHistory;
 
-    // Constructor
     public User(String username, String password) {
         this.username = username;
         this.password = password;
@@ -21,7 +20,6 @@ public class User {
         this.orderHistory = new ArrayList<>();
     }
 
-    // Method to add a product to the cart
     public void addToCart(Product product) {
         if (product != null) {
             cart.add(product);
@@ -31,7 +29,6 @@ public class User {
         }
     }
 
-    // Method to view the cart
     public void viewCart() {
         if (cart.isEmpty()) {
             System.out.println("Your cart is empty.");
@@ -44,36 +41,30 @@ public class User {
         }
     }
 
-    // Method to checkout and generate the bill
     public void checkout() {
         if (cart.isEmpty()) {
             System.out.println("Your cart is empty. Add products before checking out.");
         } else {
-            // Generate and display the bill
             Bill bill = new Bill(cart);
             bill.displayBill();
 
-            // Create an order and add to the history
             Order order = new Order(cart);
             orderHistory.add(order);
 
-            cart.clear(); // Clear the cart after checkout
+            cart.clear(); 
             System.out.println("Thank you for your purchase!");
             System.out.println("Your order has been placed and added to the order history.");
         }
     }
-    // Inside User.java class
 public void rateProduct(Product product, double userRating) {
     if (product != null && userRating >= 1 && userRating <= 5) {
-        product.rateProduct(userRating);  // Call the rateProduct method of Product class
+        product.rateProduct(userRating); 
         System.out.println("Thank you for rating " + product.getName());
     } else {
         System.out.println("Invalid rating. Please provide a rating between 1 and 5.");
     }
 }
 
-
-    // Method to view order history
     public void viewOrderHistory() {
         if (orderHistory.isEmpty()) {
             System.out.println("You have no past orders.");
@@ -85,12 +76,9 @@ public void rateProduct(Product product, double userRating) {
         }
     }
 
-    // Getter for username
     public String getUsername() {
         return username;
     }
-
-    // Getter for password
     public String getPassword() {
         return password;
     }
