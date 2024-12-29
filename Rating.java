@@ -1,5 +1,4 @@
 package com.mycompany.resalefashionhub.product;
-
 public class Rating {
     private int stars; 
     private String reviewText;
