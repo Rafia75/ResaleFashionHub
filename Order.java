@@ -1,5 +1,4 @@
 package com.mycompany.resalefashionhub.order;
-
 import com.mycompany.resalefashionhub.product.Product;
 import java.util.List;
 import java.util.Date;
