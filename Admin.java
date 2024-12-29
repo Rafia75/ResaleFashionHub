@@ -1,5 +1,4 @@
 package com.mycompany.resalefashionhub.admin;
-
 import java.util.ArrayList;
 import java.util.List;
 import com.mycompany.resalefashionhub.product.Product;
