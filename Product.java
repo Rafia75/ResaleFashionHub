@@ -1,5 +1,4 @@
 package com.mycompany.resalefashionhub.product;
-
 public class Product {
     private String name;
     private String description;
